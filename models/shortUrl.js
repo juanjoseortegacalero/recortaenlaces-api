@@ -20,6 +20,6 @@ const urlSchema = new Schema({
 })
 
 
-const urlModel = mongoose.model('ShortUrl', urlSchema)
+const UrlModel = mongoose.model('ShortUrl', urlSchema)
 
-module.exports = urlModel;
+module.exports = UrlModel;
