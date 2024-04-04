@@ -7,8 +7,12 @@ const app= express();
 
 
 //Conection database
-mongoose.connect(process.env.MONGO_URL) .then(()=> console.log('Database Connected')) .catch((err)=> console.log('Database Connected', err))
-
+mongoose.connect(process.env.MONGO_URL), {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(db => console.log('Db is connected'))
+.catch(err => console.log(err));
 
 //Middleware
 app.use(express.json());
