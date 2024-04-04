@@ -7,7 +7,7 @@ const app= express();
 
 
 //Conection database
-mongoose.connect(process.env.MONGO_URL), {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
