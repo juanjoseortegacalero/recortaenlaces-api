@@ -1,5 +1,5 @@
 const User = require ('../models/user');
-const urlModel = require ('../models/shortUrl');
+const UrlModel = require ('../models/shortUrl');
 const { hashPassword, comparePassword } =require('../helpers/auth');
 const jwt = require('jsonwebtoken');
 
