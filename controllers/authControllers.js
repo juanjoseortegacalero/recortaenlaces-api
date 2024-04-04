@@ -106,13 +106,13 @@ const logOut =(req, res)=>{
 //Cortar enlaces
 const cortarEnlace = async (req, res)=>{
    const {full} = req.body;
-   const url = await urlModel.create({full })
+   const url = await UrlModel.create({full })
    return res.json(url)   
 }
 
 const verEnlace = async (req, res)=>{
     try{
-        const urls = await urlModel.find().sort({clicks:-1}).limit(10)
+        const urls = await UrlModel.find().sort({clicks:-1}).limit(10)
         res.status(200).json(urls)
     } catch (error){
         res.json( { message: error.message})
@@ -121,7 +121,7 @@ const verEnlace = async (req, res)=>{
 
   const ultimoEnlace = async (req, res)=>{
     try{
-        const urls = await urlModel.find().sort({_id:-1}).limit(1)
+        const urls = await UrlModel.find().sort({_id:-1}).limit(1)
         res.status(200).json(urls)
     } catch (error){
         res.json( { message: error.message})
@@ -129,7 +129,7 @@ const verEnlace = async (req, res)=>{
   }
 
 const reDirect = async (req, res) => {
-      const enlace = await urlModel.findOne({short: req.params.id})
+      const enlace = await UrlModel.findOne({short: req.params.id})
       if (!enlace) {
         return res.status(404).json({msj : "URL not found"})
       } else {
