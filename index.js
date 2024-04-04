@@ -7,8 +7,8 @@ const app= express();
 
 
 //Conection database
-mongoose.connect(process.env.MONGO_URL).
-  catch(error => handleError(error));
+mongoose.connect(process.env.MONGO_URL) .then(()=> console.log('Database Connected')) .catch(()=> console.log('Database Connected', err))
+
 
 //Middleware
 app.use(express.json());
