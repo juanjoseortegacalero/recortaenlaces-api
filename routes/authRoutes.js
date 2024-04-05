@@ -8,7 +8,7 @@ const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnla
 router.use(
     cors({
         credentials: true,
-        origin: 'https://recortaenlaces.onrender.com'
+        origin: 'FRONTEND_URL'
         
     })
 )
