@@ -8,7 +8,7 @@ const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnla
 router.use(
     cors({
         credentials: true,
-        origin: 'FRONTEND_URL'
+        origin: process.env.FRONTEND_URL
         
     })
 )
