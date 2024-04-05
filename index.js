@@ -18,28 +18,17 @@ app.use(cookieParser());
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 
-router.use(
-    cors({
-        credentials: true,
-        origin: 'https://recortaenlaces.onrender.com'
-        
-    })
-)
+//Middleware
+app.use(express.json());
+app.use(cookieParser());
+
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({extended: false}))
+
+app.use('/', require('./routes/authRoutes'))
 
 const port = 8080;
 app.listen(port, () => console.log(`Server is running on port ${port}`))
-
-
-router.get('/', test)
-router.post('/register', registerUser)
-router.post('/login', loginUser)
-router.get('/profile', getProfile)
-router.get('/logout', logOut)
-router.post('/corta', cortarEnlace)
-router.get('/verEnlace', verEnlace)
-router.get('/ultimoEnlace', ultimoEnlace)
-router.post('/:id', reDirect)
-
 
 module.exports = router
 
