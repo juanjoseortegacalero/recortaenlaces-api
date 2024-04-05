@@ -4,7 +4,7 @@ const cors = require('cors')
 const {mongoose} = require ('mongoose')
 const cookieParser = require ('cookie-parser')
 const router = express.Router();
-const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnlace, reDirect, ultimoEnlace} = require('./controllers/authControllers')
+const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnlace, reDirect, ultimoEnlace} = require('/controllers/authControllers')
 const app= express();
 
 
