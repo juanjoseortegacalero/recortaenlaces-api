@@ -26,6 +26,9 @@ router.use(
     })
 )
 
+const port = 8000;
+app.listen(port, () => console.log(`Server is running on port ${port}`))
+
 
 router.get('/', test)
 router.post('/register', registerUser)
@@ -40,5 +43,3 @@ router.post('/:id', reDirect)
 
 module.exports = router
 
-const port = 8000;
-app.listen(port, () => console.log(`Server is running on port ${port}`))
