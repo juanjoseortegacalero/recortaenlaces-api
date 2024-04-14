@@ -129,15 +129,14 @@ const verEnlace = async (req, res)=>{
   }
 
 const reDirect = async (req, res) => {
-      const enlace = await urlModel.findOne({short: req.params.id})
-      if (!enlace) {
-        return res.status(404).json({msj : "URL not found"})
+      const shortUrl = await urlModel.findOne({ short: req.params.id })
+      if (shortUrl == null) return res.sendStatus(404)
       } else {
-        res.status(200).json({url: enlace.full})
+        res.status(200).json({url: shortUrl.full})
         
-        enlace.clicks++
+        shortUrl.clicks++
 
-        enlace.save()
+        shortUrl.save()
         
         //res.redirect(enlace.full)
       }
