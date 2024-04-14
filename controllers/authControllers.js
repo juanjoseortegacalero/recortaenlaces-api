@@ -139,7 +139,6 @@ const reDirect = async (req, res) => {
         shortUrl.save()
         
         //res.redirect(enlace.full)
-      }
     }
 
 module.exports={
