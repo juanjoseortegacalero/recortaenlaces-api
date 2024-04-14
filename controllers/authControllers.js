@@ -131,7 +131,7 @@ const verEnlace = async (req, res)=>{
 const reDirect = async (req, res) => {
       const shortUrl = await urlModel.findOne({ short: req.params.id })
       if (shortUrl == null) return res.sendStatus(404)
-      } else {
+    
         res.status(200).json({url: shortUrl.full})
         
         shortUrl.clicks++
