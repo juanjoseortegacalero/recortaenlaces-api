@@ -106,7 +106,7 @@ const logOut =(req, res)=>{
 //Cortar enlaces
 const cortarEnlace = async (req, res)=>{
    const {full} = req.body;
-   const url = await urlModel.create({full })
+   const url = await urlModel.create({full})
    return res.json(url)   
 }
 
@@ -139,7 +139,7 @@ const reDirect = async (req, res) => {
 
         shortUrl.save()
         
-        res.redirect(shortUrl.full)
+        //res.redirect(shortUrl.full)
     }
 
 module.exports={
