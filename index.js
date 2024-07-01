@@ -7,7 +7,7 @@ const app= express();
 
 
 //Conection database
-mongoose.connect(process.env.MONGODB_URI) .then(()=> console.log('Database Connected')) .catch(()=> console.log('Database Connected', err))
+mongoose.connect(process.env.MONGODB_URI) .then(()=> console.log('Database Connected')) .catch(()=> console.log('Database Connected'))
 
 //Middleware
 app.use(express.json());
