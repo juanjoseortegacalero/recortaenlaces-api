@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
-const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnlace, reDirect, ultimoEnlace} = require('../controllers/authControllers')
+const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnlace, reDirect, ultimoEnlace} = require('../controllers/authControllers');
 
 //Middleware
 
@@ -9,7 +9,6 @@ router.use(
     cors({
         credentials: true,
         origin: 'https://recortarenlaces.vercel.app'
-        
     })
 )
 
