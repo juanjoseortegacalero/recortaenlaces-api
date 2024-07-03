@@ -8,7 +8,7 @@ const { test, registerUser, loginUser, getProfile, logOut, cortarEnlace, verEnla
 router.use(
     cors({
         origin: 'https://recortarenlaces.vercel.app',
-        credential: 'true',
+        credentials: true,
     })
     
 )
