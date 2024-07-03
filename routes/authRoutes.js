@@ -10,6 +10,7 @@ router.use(
         credentials: true,
         origin: 'https://recortarenlaces.vercel.app'
     })
+    
 )
 
 
